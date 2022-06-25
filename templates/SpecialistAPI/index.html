@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="GET" action="{% url 'index' %}">
+        <h3>Location</h3>
+        <input type="text" name="search_location"><br>
+        <h3>Worker</h3>
+        <input type="text" name="search_worker"><br><br>
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+
+    {% for spec in specs %}
+        {{spec.location}}<br>
+        {{spec.worker}}<br>
+        {{spec.begining_worked_day}} - {{spec.ending_worked_day}}<br>
+        {{spec.appointment}}<br>
+        <a href="{{spec.id}}">Register</a>
+        {{k}}
+        <hr>
+    {% endfor %}
+
+    {{a}}
+</body>
+</html>
