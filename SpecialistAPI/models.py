@@ -7,4 +7,4 @@ class Specialist(models.Model):
     worker = models.CharField(max_length=50)
     begining_worked_day = models.TimeField()
     ending_worked_day = models.TimeField()
-    diapason = models.IntegerField()
+    appointment = models.IntegerField()
